@@ -1,0 +1,6 @@
+# Arival status Status
+
+> This is a service status page powered by OneUptime. It shows real-time status, incidents, announcements, and scheduled maintenance events.
+
+- [RSS Feed](https://status.arival.com/rss): RSS feed of incidents, announcements, and scheduled maintenance events.
+- [Status Overview JSON](https://status.arival.com/status-page-api/overview/5fae0343-1596-4b91-bb59-e3b064360e7c): Machine-readable JSON overview of the current status, resources, active incidents, announcements, and scheduled maintenance events (HTTP GET).

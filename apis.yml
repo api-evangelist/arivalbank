@@ -1,23 +1,91 @@
 aid: arivalbank
+
 name: Arivalbank
-description: 'Arivalbank is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://arival.com/_gatsby/file/a7a4555ab04c405ae4cf299b99b69c2c/og-image_eng.png?u=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fark6fr17%2Fproduction%2F8bebeaa1427f46010fcaf6e3f916dc07ea940994-4800x2520.png
+
+description: Arivalbank is a digital banking platform offering global financial services for businesses and startups. It provides multi-currency
+  accounts, stablecoin solutions, and card issuance, enabling users to manage personal and corporate finances worldwide. Licensed in Puerto Rico,
+  Arival Bank operates internationally with a focus on seamless cross-border transactions and modern banking experiences.
+
 url: https://raw.githubusercontent.com/api-evangelist/arivalbank/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- FinTech
+- Banking
+- DigitalBanking
+- GlobalPayments
+- Stablecoins
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/arivalbank-llms.txt
+- type: MCPServer
+  url: mcp/arivalbank-mcp.yml
+- type: Hosts
+  url: hosts/arivalbank-hosts.yml
+- type: Vendors
+  url: vendors/arivalbank-vendors.yml
+- type: TermsOfService
+  url: https://arival.com/document/terms-of-use
+- type: Security
+  url: https://arival.com/user-guide/security
+- type: PrivacyPolicy
+  url: https://arival.com/document/privacy-policy
+- type: Pricing
+  url: https://arival.com/faq/pricing
+- type: Documentation
+  url: https://developers.arival.com/
+- type: DomainSecurity
+  url: security/arivalbank-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/arivalbank
+  url: https://arival.com
+
+apis:
+- name: Arivalbank API
+  description: Arivalbank provides digital banking services; API details are not publicly documented.
+  humanURL: https://arival.com
+  baseURL: null
+  aid: arivalbank:arivalbank-api
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://status.arival.com/mcp
+    status: null
+  - url: https://app.arival.com/mcp
+    status: 403
+  - url: https://developers.arival.com/mcp
+    status: 403
+  - url: https://equityzen.com/company/arivalbank
+    status: 403
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
